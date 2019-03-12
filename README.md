@@ -4,7 +4,7 @@ This is a fork of the minimalistic [Quartz](https://github.com/troennes/quartz-t
 
 ![screen1](./media/preview.png)
 
-Tested on a MacOS.
+Tested on MacOS.
 
 ## How to install
 
