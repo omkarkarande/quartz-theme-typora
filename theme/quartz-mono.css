@@ -136,6 +136,7 @@ sup.md-footnote {
 .cm-s-inner span.cm-def { color: #ffa727; }
 .cm-s-inner span.cm-bracket { color: #f7f7f1; }
 .cm-s-inner span.cm-tag { color: #f82a71; }
+.cm-s-inner span.cm-operator { color: #f82a71; }
 .cm-s-inner span.cm-header { color: #ae80fe; }
 .cm-s-inner span.cm-link { color: #ae80fe; }
 .cm-s-inner span.cm-error { background: #f82a71; color: #f7f7f1; }
