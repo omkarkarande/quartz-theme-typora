@@ -1,4 +1,4 @@
-# Quartz Theme for Typora
+# Quartz Mono Theme for Typora
 
 This is a fork of the minimalistic [Quartz](https://github.com/troennes/quartz-theme-typora) theme for typora. It contains a dark theme, **Quartz Mono** which is a colorful theme inspired by the Monokai color scheme. It also contains a light theme, **Quartz Mini** which is slightly modified from the original solely based on personal preference.
 
