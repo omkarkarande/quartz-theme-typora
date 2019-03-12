@@ -1,0 +1,146 @@
+@import 'night/codeblock.dark.css';
+@import 'night/mermaid.dark.css';
+@import 'night/sourcemode.dark.css';
+@import 'quartz-mini.css';
+
+:root {
+  --background-color: #171717;
+  --accented-background-color: var(--background-color);
+  --light-header-color: #ddd; /* H1-H3 */
+  --select-text-bg-color: #c4c4c4;
+  --accent-color: #4f525a;
+  --font-color: #bebebe;
+  --header-color: #bebebe; /* H4-H6 */
+  --border-color: #232629;
+  --link-color: #66d8ee;
+  --code-bg-color: #191919;
+  --hover-bg-color: var(--background-color)
+  --control-text-color: var(--font-color);
+  --side-bar-bg-color: var(--background-color);
+  --control-text-hover-color: var(--header-color);
+  --item-hover-text-color: var(--header-color);
+  --item-hover-bg-color: var(--hover-bg-color);
+  --bg-color: var(--background-color);
+  --text-color: var(--font-color);
+  --meta-content-color: var(--accent-color);
+  --md-char-color: var(--accent-color);
+  --window-border: 1px solid rgba(0,0,0,.07);
+  --active-file-bg-color: var(--hover-bg-color);
+}
+
+::-webkit-scrollbar {
+  display:none;
+}
+
+.outline-item:hover {
+  background-color: var(--hover-bg-color);
+}
+
+#write {
+  cursor: -webkit-image-set(url("night/cursor.png") 1x, url("night/cursor@2x.png") 2x) 8 8, auto;
+}
+
+h1{
+  color: #f82a71
+}
+h2 {
+  color: #a6e12d
+}
+h3 {
+  color: #ffa727;
+}
+
+b {
+  color: #ae80fe;
+}
+
+mark {
+  background: #b8b80a
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: var(--background-color);
+}
+
+sup.md-footnote {
+  background-color: var(--code-bg-color);
+  color: var(--font-color);
+}
+
+/* right click menu */
+.context-menu {
+  background-color: #141313;
+}
+
+.context-menu.dropdown-menu .divider {
+  background-color: #232629;
+}
+
+/* focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: #4f525a !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+  opacity: #4f525a !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+  color: #4f525a;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+  color: #4f525a !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+  color: var(--light-header-color);
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+  color: #4f525a !important;
+}
+
+/* Code */
+/* Based on Sublime Text's inner theme */
+
+.cm-s-inner.CodeMirror { background: var(--code-bg-color); color: #f7f7f1; }
+.cm-s-inner div.CodeMirror-selected { background: var(--code-bg-color); }
+.cm-s-inner .CodeMirror-gutters { background: var(--code-bg-color); border-right: 0px; }
+.cm-s-inner .CodeMirror-guttermarker { color: white; }
+.cm-s-inner .CodeMirror-guttermarker-subtle { color: #333333; }
+.cm-s-inner .CodeMirror-linenumber { color: #333333; }
+.cm-s-inner .CodeMirror-cursor { border-left: 2px solid #f7f7f1; }
+
+.cm-s-inner span.cm-comment { color: #333333; }
+.cm-s-inner span.cm-atom { color: #ae80fe; }
+.cm-s-inner span.cm-number { color: #ae80fe; }
+
+.cm-s-inner span.cm-comment.cm-attribute { color: #a6e12d; }
+.cm-s-inner span.cm-comment.cm-def { color: #bc9262; }
+.cm-s-inner span.cm-comment.cm-tag { color: #bc6283; }
+.cm-s-inner span.cm-comment.cm-type { color: #5998a6; }
+
+.cm-s-inner span.cm-property, .cm-s-inner span.cm-attribute { color: #a6e12d; }
+.cm-s-inner span.cm-keyword { color: #f82a71; }
+.cm-s-inner span.cm-builtin { color: #66d8ee; }
+.cm-s-inner span.cm-string { color: #e6db73; }
+
+.cm-s-inner span.cm-variable { color: #f7f7f1; }
+.cm-s-inner span.cm-variable-2 { color: #66d8ee; }
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: #66d8ee; }
+.cm-s-inner span.cm-def { color: #ffa727; }
+.cm-s-inner span.cm-bracket { color: #f7f7f1; }
+.cm-s-inner span.cm-tag { color: #f82a71; }
+.cm-s-inner span.cm-header { color: #ae80fe; }
+.cm-s-inner span.cm-link { color: #ae80fe; }
+.cm-s-inner span.cm-error { background: #f82a71; color: #f7f7f1; }
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #bebebe;
+  z-index: 3;
+}

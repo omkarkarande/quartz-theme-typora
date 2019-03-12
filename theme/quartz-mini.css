@@ -2,32 +2,36 @@
 
 :root {
   --accent-color: #aeb1b5; /* #'s before H1-3 */
-  --background-color: white;
-  --border-color: #ddd; 
-  --code-bg-color: #f8f8f8; 
-  --font-color: #42464c;
+  --background-color: #fafafa;
+  --border-color: #ddd;
+  --code-bg-color: #f0f0f0;
+  --font-color: #555;
   --header-color: #222324;
   --link-color: #2077b2;
-  --control-text-color: #667176;
+  --control-text-color: #666666;
   --side-bar-bg-color: #fafafa;
-  --body-font: Roboto, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body-font: Roboto, "Open Sans" , "Helvetica Neue", Helvetica, Arial, sans-serif;
   --border-radius: 2px;
   --document-horizontal-margin: 80px;
   --document-padding-x: 10ch;
   --font-size: 16px;
-  --h1-fontsize: 1.5rem;   /* 1,5   rem = 24px */
-  --h2-fontsize: 1.375rem; /* 1,375 rem = 22px */
-  --h3-fontsize: 1.25rem;  /* 1,25  rem = 20px */
+  --h1-fontsize: 1.7rem;   /* 1,5   rem = 24px */
+  --h2-fontsize: 1.4rem; /* 1,375 rem = 22px */
+  --h3-fontsize: 1.2rem;  /* 1,25  rem = 20px */
   --h4-fontsize: 1.125rem; /* 1,125 rem = 18px */
   --line-height: 1.4;
   --main-content-margin: 0 auto;
-  --main-content-max-width: 100ch;
+  --main-content-max-width: 180ch;
   --monospace-font-size: 15px;
-  --monospace-font: Inconsolata, Consolas, Menlo, "Liberation Mono", Courier, monospace;
+  --monospace-font: "Fira Code", Courier, monospace;
   --monospace-line-height: 1.4;
   --monospace: var(--monospace-font); /* Fixes source code mode */
   --nav-width: 200px;
   --vertical-padding: 40px;
+}
+
+::-webkit-scrollbar {
+  display:none;
 }
 
 @font-face {
@@ -70,18 +74,6 @@
   font-style: italic;
   font-weight: 300;
   src: local('Roboto LightItalic'), local('Roboto-LightItalic'), url('./quartz/Roboto-LightItalic.ttf') format('truetype')
-}
-
-@font-face {
-  font-family: 'Inconsolata';
-  font-weight: Normal;
-  src: local('Inconsolata'), local('Inconsolata-Regular'), url('./quartz/Inconsolata-Regular.ttf') format('truetype')
-}
-
-@font-face {
-  font-family: 'Inconsolata';
-  font-weight: bold;
-  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url('./quartz/Inconsolata-Bold.ttf') format('truetype')
 }
 
 /* Narrow layout styles */
@@ -128,7 +120,7 @@ pre.md-meta-block {
 /* headings */
 h1, h2, h3 {
   font-weight: 300;
-  color: var(--header-color);  
+  color: var(--header-color);
 }
 
 h1 {
@@ -154,7 +146,7 @@ h3 {
 }
 
 h4, h5, h6 {
-  color: var(--header-color);  
+  color: var(--header-color);
   margin-top: 1rem;
   margin-bottom: 0rem;
   font-size: 1rem;
@@ -165,13 +157,13 @@ h4 {
 }
 
 h6 {
-  color: var(--control-text-color);	
+  color: var(--control-text-color);
 }
 
 h1::before,
 h2::before,
 h3::before {
-  font-weight: 400;
+  font-weight: 300;
   text-align: right;
   width: 5ch;
   padding-right: 1ch;
@@ -266,7 +258,7 @@ blockquote {
 /* horizontal line */
 hr {
   border: none;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
 }
@@ -279,10 +271,34 @@ p {
  * Code Fences
  * see http:/*support.typora.io/Code-Block-Styles
  */
+/* Neo theme for codemirror */
+
+/* Color scheme */
+
+.cm-s-inner.CodeMirror {
+  background-color:var(--code-bg-color);
+  color:#2e383c;
+  line-height:1.4375;
+}
+.cm-s-inner .cm-comment { color:#75787b; }
+.cm-s-inner .cm-keyword, .cm-s-inner .cm-property { color:#1d75b3; }
+.cm-s-inner .cm-atom,.cm-s-inner .cm-number { color:#75438a; }
+.cm-s-inner .cm-node,.cm-s-inner .cm-tag { color:#9c3328; }
+.cm-s-inner .cm-string { color:#b35e14; }
+.cm-s-inner .cm-variable,.cm-s-inner .cm-qualifier { color:#047d65; }
 
 .cm-s-inner .CodeMirror-gutters {
-   background: var(--code-bg-color);
+  border:none;
+  border-right:10px solid transparent;
+  background-color:transparent;
 }
+
+.cm-s-inner .CodeMirror-linenumber {
+  color:var(--accent-color);
+}
+
+.cm-s-inner .CodeMirror-guttermarker { color: #1d75b3; }
+.cm-s-inner .CodeMirror-guttermarker-subtle { color: #e0e2e5; }
 
 .code-tooltip {
   box-shadow: none;

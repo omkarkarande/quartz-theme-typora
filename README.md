@@ -1,24 +1,14 @@
 # Quartz Theme for Typora
 
-A minimalistic theme for documentation, note-taking and code snippets. It contains a light theme, **Milky Quartz**, and a dark theme, **Smoky Quartz**.
+This is a fork of the minimalistic [Quartz](https://github.com/troennes/quartz-theme-typora) theme for typora. It contains a dark theme, **Quartz Mono** which is a colorful theme inspired by the Monokai color scheme. It also contains a light theme, **Quartz Mini** which is slightly modified from the original solely based on personal preference.
 
-![screen1](/media/preview.png)
+![screen1](./media/preview.png)
 
-Tested on Windows and Linux. The dark theme does not currently support Windows "Unibody" style. Not fully tested, but should work on MacOS.
+Tested on a MacOS.
 
 ## How to install
 
-1. Download [latest release](https://github.com/troennes/quartz-theme-typora/releases/latest).
+1. Download or Clone this repo.
 2. Go to Typora Preferences, select "Open Theme Folder".
-3. Copy or move .css files and the "quartz" folder (with fonts), into the newly opened folder.
+3. Copy everything form the "theme" folder into the newly opened folder.
 4. Restart Typora, then select it from Themes menu.
-
-## More screenshots
-
-![screen2](/media/milky-quartz1.png)
-
-![screen3](/media/milky-quartz2.png)
-
-![screen4](/media/smoky-quartz1.png)
-
-![screen5](/media/smoky-quartz2.png)
