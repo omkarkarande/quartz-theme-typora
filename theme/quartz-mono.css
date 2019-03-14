@@ -8,7 +8,7 @@
   --accented-background-color: var(--background-color);
   --light-header-color: #ddd; /* H1-H3 */
   --select-text-bg-color: #c4c4c4;
-  --accent-color: #4f525a;
+  --accent-color: #424242;
   --font-color: #bebebe;
   --header-color: #bebebe; /* H4-H6 */
   --border-color: #232629;
@@ -40,11 +40,99 @@
   cursor: -webkit-image-set(url("night/cursor.png") 1x, url("night/cursor@2x.png") 2x) 8 8, auto;
 }
 
+/* Custom list-style */
+#write ol,
+#write ul {
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+#write ol {
+  counter-reset: li;
+}
+
+#write ol > li,
+#write ul > li {
+  position: relative;
+  list-style: none;
+}
+
+#write ol > li::before,
+#write ul > li::before {
+  position: absolute;
+  color: #ae80fe;
+}
+
+#write ol > li::before {
+  content: counter(li) ".";
+  counter-increment: li;
+  right: calc(100% + 0.5rem);
+}
+
+#write ul > li:not(.md-task-list-item)::before {
+  content: "•";
+  right: calc(100% + 0.7rem);
+  margin-top: 0.1rem;
+}
+
+#write .md-task-list-item {
+  transition: all 0.3s;
+}
+
+#write .md-task-list-item > input {
+  -webkit-appearance: initial;
+  display: block;
+  position: absolute;
+  border: 1px solid #f82a71;
+  border-radius: 50%;
+  margin-top: 0.1rem;
+  margin-left: -1.8rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: background 0.4s;
+}
+
+#write .md-task-list-item > input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#write .md-task-list-item > input:hover {
+  background: var(--accent-color);
+}
+
+#write .task-list-done {
+  color: var(--accent-color);
+  text-decoration: line-through;
+}
+
+#write .md-task-list-item > input[checked]::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 60%;
+  width: 2px;
+  transform: rotate(40deg);
+  background: var(--font-color);
+}
+
+#write .md-task-list-item > input[checked]::after {
+  content: "";
+  position: absolute;
+  top: 46%;
+  left: 25%;
+  height: 30%;
+  width: 2px;
+  transform: rotate(-40deg);
+  background: var(--font-color);
+}
+
 h1{
-  color: #f82a71
+  color: #f82a71;
 }
 h2 {
-  color: #a6e12d
+  color: #a6e12d;
 }
 h3 {
   color: #ffa727;
@@ -55,7 +143,7 @@ strong {
 }
 
 mark {
-  background: #b8b80a
+  background: #b8b80a;
 }
 
 table tr:nth-child(2n),
