@@ -128,6 +128,7 @@
   background: var(--font-color);
 }
 
+
 h1{
   color: #f82a71;
 }
@@ -196,13 +197,13 @@ sup.md-footnote {
 /* Code */
 /* Based on Sublime Text's inner theme */
 
-.cm-s-inner.CodeMirror { background: var(--code-bg-color); color: #f7f7f1; }
+.cm-s-inner.CodeMirror { background: var(--code-bg-color); color: var(--font-color); }
 .cm-s-inner div.CodeMirror-selected { background: var(--code-bg-color); }
 .cm-s-inner .CodeMirror-gutters { background: var(--code-bg-color); border-right: 0px; }
 .cm-s-inner .CodeMirror-guttermarker { color: white; }
 .cm-s-inner .CodeMirror-guttermarker-subtle { color: #333333; }
 .cm-s-inner .CodeMirror-linenumber { color: #333333; }
-.cm-s-inner .CodeMirror-cursor { border-left: 2px solid #f7f7f1; }
+.cm-s-inner .CodeMirror-cursor { border-left: 2px solid var(--font-color); }
 
 .cm-s-inner span.cm-comment { color: #333333; }
 .cm-s-inner span.cm-atom { color: #ae80fe; }
@@ -218,16 +219,16 @@ sup.md-footnote {
 .cm-s-inner span.cm-builtin { color: #66d8ee; }
 .cm-s-inner span.cm-string { color: #e6db73; }
 
-.cm-s-inner span.cm-variable { color: #f7f7f1; }
+.cm-s-inner span.cm-variable { color: var(--font-color); }
 .cm-s-inner span.cm-variable-2 { color: #66d8ee; }
 .cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: #66d8ee; }
 .cm-s-inner span.cm-def { color: #ffa727; }
-.cm-s-inner span.cm-bracket { color: #f7f7f1; }
+.cm-s-inner span.cm-bracket { color: var(--font-color); }
 .cm-s-inner span.cm-tag { color: #f82a71; }
 .cm-s-inner span.cm-operator { color: #f82a71; }
 .cm-s-inner span.cm-header { color: #ae80fe; }
 .cm-s-inner span.cm-link { color: #ae80fe; }
-.cm-s-inner span.cm-error { background: #f82a71; color: #f7f7f1; }
+.cm-s-inner span.cm-error { background: #f82a71; color: var(--font-color); }
 
 .CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid #bebebe;
